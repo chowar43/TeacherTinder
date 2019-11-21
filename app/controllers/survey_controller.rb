@@ -1,6 +1,6 @@
 class SurveyController < ApplicationController
     def index 
-        @teachers = Teacher.all
+        @teacher = Teacher.all
     end 
     
     def new
