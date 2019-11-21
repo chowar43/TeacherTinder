@@ -1,1 +1,45 @@
-<h1>New Survey</h1>
+</p>
+
+<h1>Student Survey</h1>
+
+<p>
+<p class="form_row">
+    <label for="q1">1. What is your academic year?</label>
+    <% ['Freshman', 'Sophomore',  'Junior', 'Senior'].each do |theme| %>
+      <br><%= radio_button_tag 'theme1', theme, @theme == theme %>
+      <%= theme.humanize %>
+    <% end %>
+</p>
+
+<p class="form_row">
+    <label for="q2">2. What is your preferred time for taking your classes?</label>
+    <% [  'Morning', 'Afternoon', 'Does not Matter'].each do |theme| %>
+      <br><%= radio_button_tag 'theme2', theme, @theme == theme %>
+      <%= theme.humanize %>
+    <% end %>
+</p>
+
+<p class="form_row">
+    <label for="q3">3. What is your preferred type of class?</label>
+    <% ['Lecture', 'Flipped', 'Online'].each do |theme| %>
+      <br><%= radio_button_tag 'theme3', theme, @theme == theme %>
+      <%= theme.humanize %>
+    <% end %>
+</p>
+
+<p class="form_row">
+    <label for="q4">4. How many credits are you currently taking?</label>
+    <% [ 'Less than 12', '12-15', 'More than 15'].each do |theme| %>
+      <br><%= radio_button_tag 'theme4', theme, @theme == theme %>
+      <%= theme.humanize %>
+    <% end %>
+</p>
+
+<p class="form_row">
+    <label for="q5">5. Select which of the following aligns with your learning style.</label>
+    <% ['Visual (diagrams, illustrations)', 'Auditory (lectures)', 'Kinesthetic (observation, experimentation)'].each do |theme| %>
+      <br><%= radio_button_tag 'theme5', theme, @theme == theme %>
+      <%= theme.humanize %>
+    <% end %>
+</p>
+</p> 

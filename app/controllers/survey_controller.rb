@@ -4,6 +4,7 @@ class SurveyController < ApplicationController
     end 
     
     def new
+        @teacher = Teacher.new
     end 
     
     def create 
