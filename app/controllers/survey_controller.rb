@@ -1,9 +1,10 @@
 class SurveyController < ApplicationController
     def index 
-        @teachers = Teacher.all
+        @teacher = Teacher.all
     end 
     
     def new
+        @teacher = Teacher.new
     end 
     
     def create 
