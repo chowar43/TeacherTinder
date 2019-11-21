@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(version: 2019_11_19_155921) do
     t.text "after_survey_content"
   end
 
+  create_table "teacher_dbs", force: :cascade do |t|
+    t.string "name"
+    t.string "year"
+    t.string "class"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "year"
