@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_14_161949) do
+ActiveRecord::Schema.define(version: 2019_11_19_155921) do
 
   create_table "rapidfire_answers", force: :cascade do |t|
     t.integer "attempt_id"
@@ -55,16 +55,6 @@ ActiveRecord::Schema.define(version: 2019_11_14_161949) do
     t.text "after_survey_content"
   end
 
-<<<<<<< HEAD
-=======
-  create_table "teacher_dbs", force: :cascade do |t|
-    t.string "name"
-    t.string "year"
-    t.string "class"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "teachers", force: :cascade do |t|
     t.string "name"
     t.string "year"
@@ -72,5 +62,4 @@ ActiveRecord::Schema.define(version: 2019_11_14_161949) do
     t.datetime "updated_at", null: false
   end
 
->>>>>>> c6a086515840cf33510a12acbbf9051786445d12
 end

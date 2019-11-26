@@ -1,7 +1,7 @@
 # This migration comes from rapidfire (originally 20130502170733)
 if Rails::VERSION::MAJOR >= 5
   version = [Rails::VERSION::MAJOR, Rails::VERSION::MINOR].join('.').to_f
-  base = ActiveRecord::Migration[version]
+  base = ActiveRecord::Migration[5.2]
 else
   base = ActiveRecord::Migration
 end
