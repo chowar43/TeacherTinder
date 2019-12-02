@@ -1,4 +1,4 @@
-<h1>Listing Teachers</h1>
+<!--<h1>Listing Teachers</h1>
  
 <table>
   <tr>
@@ -13,4 +13,18 @@
       
     </tr>
   <% end %>
-</table>
+</table>-->
+
+<h1>Teachers</h1>
+
+<h2>Search by Year:</h2>
+  <%= form_tag(years_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag ("Search") %>
+  <% end %>
+  
+  <% @teachers.each do |teacher| %>
+    <ul>
+      <li><%= link_to teacher.name, teacher_path(teacher) %></li><br>
+    </ul>
+  <% end %>

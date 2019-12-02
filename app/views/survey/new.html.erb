@@ -3,6 +3,7 @@
 <h1>Student Survey</h1>
 
 <p>
+<!--<form action="userInput.php" method="POST"></form>-->
 <p class="form_row">
     <label for="q1">1. What is your academic year?</label>
     <% ['Freshman', 'Sophomore',  'Junior', 'Senior'].each do |theme| %>
@@ -42,5 +43,6 @@
       <%= theme.humanize %>
     <% end %>
 </p>
+<!--<input type="submit" name="submit" value="Submit!" />-->
 </p>
 </p>

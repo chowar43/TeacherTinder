@@ -1,6 +1,6 @@
 class SurveyController < ApplicationController
     def index 
-        @teacher = Teacher.all
+        @teacher = Teacher.search(params[:search])
     end 
     
     def new
