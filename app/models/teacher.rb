@@ -19,6 +19,6 @@ class Teacher < ApplicationRecord
     private
     
     def teacher_params
-        params.require(:teacher).permit(:name, :year, :time, :type, :credits, :style, :search)
+        params.require(:teacher).permit(:name, :year)
     end
 end
