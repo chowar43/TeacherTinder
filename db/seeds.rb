@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Teacher.create(name: 'Lijuan Cao', year: 'Freshman', time: 'afternoon', type: 'flipped', credits: '12-15', style: 'visual')
