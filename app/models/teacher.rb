@@ -7,7 +7,7 @@ class Teacher < ApplicationRecord
         if search
             year = Year.find_by(name: search)
             if year
-                self.where(superpower_id: superpower)
+                self.where(survey_id: teacher)
             else
                 Teacher.all
             end
