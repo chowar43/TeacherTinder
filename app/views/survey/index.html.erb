@@ -2,6 +2,8 @@
 
 <h1>Teachers</h1>
 
+<div><%= link_to 'Main Menu', welcome_index_path %></div>
+
 <h2>Search by Year:</h2>
   <%= form_tag(survey_index_path, method: :get) do %>
     <%= text_field_tag(:search, params[:search]) %>
