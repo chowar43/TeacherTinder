@@ -1,0 +1,19 @@
+<h1>Teachers</h1>
+
+<div><%= link_to 'Main Menu', welcome_index_path %></div>
+<div><%= link_to 'Search By Year', survey_index_path %></div>
+<div><%= link_to 'Search By Time', prof_index_path %></div>
+
+<h2>What is your preferred class type?</h2>
+
+<h4>Please enter: Lecture, Flipped, or Online</h4>
+  <%= form_tag(instruct_index_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag 'Search', :name => nil %>
+  <% end %>
+  
+  <% @instructs.each do |instruct| %>
+    <ul>
+      <li><%= link_to instruct.name, instruct_path(instruct) %></li><br>
+    </ul>
+  <% end %>

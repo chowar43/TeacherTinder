@@ -1,0 +1,20 @@
+<h1>Teachers</h1>
+
+<div><%= link_to 'Main Menu', welcome_index_path %></div>
+<div><%= link_to 'Search By Year', survey_index_path %></div>
+<div><%= link_to 'Search By Type', instruct_index_path %></div>
+
+<h2>What is your preferred time for taking the class?</h2>
+
+<h4>Please enter: Morning, Afternoon, or Evening</h4>
+
+  <%= form_tag(prof_index_path, method: :get) do %>
+    <%= text_field_tag(:search, params[:search]) %>
+    <%= submit_tag 'Search', :name => nil %>
+  <% end %>
+  
+  <% @profs.each do |prof| %>
+    <ul>
+      <li><%= link_to prof.name, prof_path(prof) %></li><br>
+    </ul>
+  <% end %>

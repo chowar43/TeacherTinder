@@ -10,7 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_11_001631) do
+ActiveRecord::Schema.define(version: 2019_12_11_191308) do
+
+  create_table "instructors", force: :cascade do |t|
+    t.string "name"
+    t.string "type"
+    t.string "credits"
+    t.string "style"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "instructs", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.string "credits"
+    t.string "style"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "professors", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profs", force: :cascade do |t|
+    t.string "name"
+    t.string "time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "rapidfire_answers", force: :cascade do |t|
     t.integer "attempt_id"

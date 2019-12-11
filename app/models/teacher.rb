@@ -6,6 +6,8 @@ class Teacher < ApplicationRecord
     def self.search(search)
         if search
             Teacher.where('year LIKE ?', "%#{search}%")
+            #Prof.where('time LIKE ?', "%#{search}%")
+            #Instruct.where('category LIKE ?', "%#{search}%")
         else
             Teacher.all
         end

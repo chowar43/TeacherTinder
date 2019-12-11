@@ -1,17 +1,17 @@
-class SurveyController < ApplicationController
-    def index 
+class InstructController < ApplicationController
+  def index 
         @teachers = Teacher.search(params[:search])
         @profs = Prof.search(params[:search])
         @instructs = Instruct.search(params[:search])
-    end 
+  end 
     
-    def new
+  def new
         @teacher = Teacher.new
         @prof = Prof.new
         @instruct = Instruct.new
-    end 
+  end 
     
-    def create 
+  def create 
         @teacher = Teacher.new(teacher_params)
         @prof = Prof.new(prof_params)
         @instruct = Instruct.new(prof_params)
@@ -24,13 +24,13 @@ class SurveyController < ApplicationController
         
         @instruct.save
         redirect_to @instruct 
-    end 
+  end 
     
-    def show
+  def show
         @teacher = Teacher.find(params[:id])
         @prof = Prof.find(params[:id])
         @instruct = Instruct.find(params[:id])
-    end 
+  end 
     
     
 end
