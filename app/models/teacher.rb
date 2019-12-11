@@ -5,12 +5,7 @@ class Teacher < ApplicationRecord
     
     def self.search(search)
         if search
-            student_year = Teacher.find_by(year: search)
-            if student_year
-                self.where(year: student_year)
-            else
-                Teacher.all
-            end
+            Teacher.where('year LIKE ?', "%#{search}%")
         else
             Teacher.all
         end
