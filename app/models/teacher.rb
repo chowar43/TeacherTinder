@@ -1,13 +1,13 @@
 class Teacher < ApplicationRecord
-    belongs_to :year
+    #belongs_to :year
     validates :name, presence: true, length: { minimum: 5 }
     validates :year, presence: true, length: { minimum: 5 }
     
     def self.search(search)
         if search
-            year = Year.find_by(name: search)
-            if year
-                self.where(survey_id: teacher)
+            student_year = Teacher.find_by(year: search)
+            if student_year
+                self.where(year: student_year)
             else
                 Teacher.all
             end
@@ -16,9 +16,4 @@ class Teacher < ApplicationRecord
         end
     end
     
-    private
-    
-    def teacher_params
-        params.require(:teacher).permit(:name, :year)
-    end
 end

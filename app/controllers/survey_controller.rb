@@ -1,6 +1,7 @@
 class SurveyController < ApplicationController
     def index 
         @teacher = Teacher.search(params[:search])
+         
     end 
     
     def new
@@ -18,9 +19,10 @@ class SurveyController < ApplicationController
         @teacher = Teacher.find(params[:id])
     end 
     
+    
 end
 
 private
     def teacher_params 
-        params.require(:teacher).permit(:name, :year)
+        params.require(:teacher).permit(:name, :year, :search)
     end 
